@@ -32,7 +32,7 @@ public class List {
 		}
 		else{
 			Node ptr = head;
-			for(int i = 0; i < Math.min(size, ind)-1; i++){
+			for(int i = 0; i < Math.min(size, ind)-1; i++){ // если с индексом перестарались, добавляется в самый конец
 				ptr = ptr.getNextElem();
 			}
 			ptr.setNextElem(new Node(num, ptr.getNextElem()));
@@ -90,9 +90,14 @@ public class List {
 		}
 	}
 
+	/**
+	 * Получение значения элемента
+	 * @param ind индекс
+	 * @return число в указанной ячейке
+	 */
 	public int getElem(int ind){
 		if(ind >= size){
-			return (Integer) null;
+			return Integer.MIN_VALUE; // я не предумал, как умнее намекнуть пользователю, что он выбрал не тот индекс, хотел null, но как я понял, в java на инт null нет
 		}	
 		else{
 			Node ptr = head;

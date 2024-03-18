@@ -1,17 +1,52 @@
 package com.example;
 
+import java.util.Scanner;
+
 import main.java.com.example.List;
 
 public class Main {
     public static void main(String[] args) {
         List list = new List();
-        for(int i = 0; i < 5; i++){
-            list.addElem(i, i);
+        Scanner in = new Scanner(System.in);
+        boolean flag = true;
+        int num, ind;
+        int mode;
+        while (flag) {
+            System.out.println("1)добавить элемент\n2)удалить элемент\n3)редактировать элемент\n4)получить значение элемента\n5)получить все значения\n0)выход");
+            mode = in.nextInt();
+            switch (mode) {
+                case 1:
+                    System.out.println("Введите число и индекс");
+                    num = in.nextInt();
+                    ind = in.nextInt();
+                    list.addElem(num, ind);
+                    break;
+                case 2:
+                    System.out.println("Введите индекс");
+                    ind = in.nextInt();
+                    list.delElem(ind);
+                    break;
+                case 3:
+                    System.out.println("Введите число и индекс");
+                    num = in.nextInt();
+                    ind = in.nextInt();
+                    list.editElem(num, ind);
+                    break;
+                case 4:
+                    System.out.println("Введите индекс");
+                    ind = in.nextInt();
+                    list.getElem(ind);
+                    break;
+                case 5:
+                    System.out.println(list);
+                    break;
+                case 0:
+                    System.out.println("Выход из программы");
+                    flag = false;
+                    break;
+                default:
+                    System.out.println("Введене не то значение");;
+            }
         }
-        list.addElem(5,1);
-        list.delElem(0);
-        list.delElem(1);
-        System.out.println(list);
-        
     }
 }
