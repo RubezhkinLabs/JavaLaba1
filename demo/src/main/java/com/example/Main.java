@@ -8,6 +8,10 @@ public class Main {
         for(int i = 0; i < 5; i++){
             list.addElem(i, i);
         }
-        list.printAllElems();
+        list.addElem(5,1);
+        list.delElem(0);
+        list.delElem(1);
+        System.out.println(list);
+        System.out.println(list.getElem(1));
     }
 }

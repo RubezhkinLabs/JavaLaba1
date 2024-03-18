@@ -1,5 +1,10 @@
 package main.java.com.example;
 
+/**
+ * ячейка списка
+ * @param num число в ячейке
+ * @param nextElem указатель на следующий элемент
+ */
 public class Node {
 
 	private int num;
@@ -10,6 +15,8 @@ public class Node {
 		this.num = num;
 		this.nextElem = nextElem;
 	}
+	
+	//геттеры и сеттеры
 
 	public void setNum(int num) {
 		this.num = num;
