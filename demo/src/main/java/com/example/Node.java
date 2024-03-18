@@ -2,20 +2,20 @@ package main.java.com.example;
 
 public class Node {
 
-	private Int num;
+	private int num;
 
 	private Node nextElem;
 
-	public Node(Int num, Node nextElem) {
+	public Node(int num, Node nextElem) {
 		this.num = num;
 		this.nextElem = nextElem;
 	}
 
-	public void setNum(Int num) {
+	public void setNum(int num) {
 		this.num = num;
 	}
 	
-	public Int getNum() {
+	public int getNum() {
 		return num;
 	}
 

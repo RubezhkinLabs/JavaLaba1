@@ -26,7 +26,7 @@ public class List {
 	}
 
 	public void printAllElems(){
-		Node ptr;
+		Node ptr = head;
 		for(int i = 0; i < size; i++){
 			System.out.print(ptr.getNum() + " ");
 			ptr = ptr.getNextElem();
