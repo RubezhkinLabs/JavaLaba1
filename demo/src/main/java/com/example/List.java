@@ -97,7 +97,7 @@ public class List {
 	 */
 	public int getElem(int ind){
 		if(ind >= size){
-			return Integer.MIN_VALUE; // я не предумал, как умнее намекнуть пользователю, что он выбрал не тот индекс, хотел null, но как я понял, в java на инт null нет
+			return Integer.MIN_VALUE; // я не придумал, как умнее намекнуть пользователю, что он выбрал не тот индекс, хотел null, но как я понял, в java на инт null нет
 		}	
 		else{
 			Node ptr = head;
