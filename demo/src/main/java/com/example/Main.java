@@ -12,6 +12,6 @@ public class Main {
         list.delElem(0);
         list.delElem(1);
         System.out.println(list);
-        System.out.println(list.getElem(1));
+        
     }
 }

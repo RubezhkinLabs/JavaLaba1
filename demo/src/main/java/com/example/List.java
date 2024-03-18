@@ -92,7 +92,7 @@ public class List {
 
 	public int getElem(int ind){
 		if(ind >= size){
-			return null;
+			return (Integer) null;
 		}	
 		else{
 			Node ptr = head;
