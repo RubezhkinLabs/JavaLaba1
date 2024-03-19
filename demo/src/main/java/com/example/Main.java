@@ -45,7 +45,7 @@ public class Main {
                     flag = false;
                     break;
                 default:
-                    System.out.println("Введене не то значение");;
+                    System.out.println("Введено не то значение");;
             }
         }
     }
