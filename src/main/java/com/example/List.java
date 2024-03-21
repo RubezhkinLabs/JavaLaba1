@@ -63,11 +63,11 @@ public class List {
 	 * Редактирование элемента
 	 * @param num число, на которое меняется элемент
 	 * @param ind индес элемента для замены
-	 * @return флаг о выполнении операции
+	 * @throws ArrayIndexOutOfBoundsException попытка получить доступ к несуществующему элементу
 	 */
-	public boolean editElem(int num, int ind) {
-		if(ind >= size)
-			return false;
+	public void editElem(int num, int ind) {
+		if(ind < 0 || ind >= size)
+			throw new ArrayIndexOutOfBoundsException("No such index in list");
 		else {
 			if(ind == 0)
 				head = head.getNextElem();
@@ -77,7 +77,6 @@ public class List {
 					ptr = ptr.getNextElem();
 				ptr.setNum(num);
 			}
-			return true;
 		}
 	}
 
@@ -85,10 +84,10 @@ public class List {
 	 * Получение значения элемента
 	 * @param ind индекс
 	 * @return значение элемента с данным индексом
-	 * @throws ArrayIndexOutOfBoundsException попытка получить элемент с несуществующим индексом
+	 * @throws ArrayIndexOutOfBoundsException попытка получить доступ к несуществующему элементу
 	 */
 	public int getElem(int ind) {
-		if(ind >= size)
+		if(ind < 0 || ind >= size)
 			throw new ArrayIndexOutOfBoundsException("No such index in list");
 		else {
 			Node ptr = head;
