@@ -1,22 +1,16 @@
 package com.example;
 
 /**
- * ячейка списка
- * @param num число в ячейке
- * @param nextElem указатель на следующий элемент
+ * Элемент списка
  */
 public class Node {
-
 	private int num;
-
 	private Node nextElem;
 
 	public Node(int num, Node nextElem) {
 		this.num = num;
 		this.nextElem = nextElem;
 	}
-	
-	//геттеры и сеттеры
 
 	public void setNum(int num) {
 		this.num = num;
@@ -32,5 +26,17 @@ public class Node {
 	
 	public void setNextElem(Node nextElem) {
 		this.nextElem = nextElem;
+	}
+
+	@Override
+	public String toString() {
+		return String.valueOf(num);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if(obj.getClass() != Node.class)
+			return false;
+		else return this.num == ((Node) obj).num && this.nextElem == ((Node) obj).nextElem;
 	}
 }
