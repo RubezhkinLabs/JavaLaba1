@@ -7,10 +7,17 @@ public class Main {
         List list = new List();
         Scanner in = new Scanner(System.in);
         boolean flag = true;
-        int num, ind;
-        int mode;
+        int num, ind, mode;
         while (flag) {
-            System.out.println("1)добавить элемент\n2)удалить элемент\n3)редактировать элемент\n4)получить значение элемента\n5)получить все значения\n0)выход");
+            System.out.println
+                    (
+                        "1)добавить элемент\n" +
+                        "2)удалить элемент\n" +
+                        "3)редактировать элемент\n" +
+                        "4)получить значение элемента\n" +
+                        "5)получить все значения\n" +
+                        "0)выход"
+                    );
             mode = in.nextInt();
             switch (mode) {
                 case 1:
@@ -43,7 +50,7 @@ public class Main {
                     flag = false;
                     break;
                 default:
-                    System.out.println("Введено не то значение");;
+                    System.out.println("Введено не то значение");
             }
         }
     }
