@@ -102,7 +102,7 @@ public class List {
 		Node ptr = head;
 		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < size; i++){
-			sb.append(ptr.getNum()).append(" ");
+			sb.append(ptr).append(" ");
 			ptr = ptr.getNextElem();
 		}
 		return sb.toString();
