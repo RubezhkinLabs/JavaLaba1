@@ -18,7 +18,7 @@ public class List {
 	}
 
 	/**
-	 * Добавление элемента
+	 * Добавление элемента. ind = 0 для вставки в начало спискаx
 	 * @param num элемент для вставки
 	 * @param ind позиция для вставки
 	 */
@@ -42,9 +42,9 @@ public class List {
 	 * @param ind индекс удаляемого элемента
 	 * @return флаг о выполнении операции
 	 */
-	public boolean delElem(int ind) {
-		if(ind >= size)
-			return false;
+	public void delElem(int ind) {
+		if(ind < 0 || ind >= size)
+			throw new ArrayIndexOutOfBoundsException("No such index in list");
 		else {
 			if(ind == 0)
 				head = head.getNextElem();
@@ -55,7 +55,6 @@ public class List {
 				ptr.setNextElem(ptr.getNextElem().getNextElem());
 			}
 			size--;
-			return true;
 		}
 	}
 
